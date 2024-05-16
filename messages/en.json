@@ -1,0 +1,30 @@
+{
+  "Common": {
+    "Homepage": "Homepage",
+    "English": "English",
+    "Vietnamese": "Tiếng việt",
+    "Login": "Login",
+    "Logout": "Logout",
+    "Title": "Title",
+    "Description": "Description",
+    "Username": "Username",
+    "Password": "Password",
+    "Submit": "Submit",
+    "Error": "Error {error}",
+    "NotFound": "Not found",
+    "GoTo": "Go to {link}"
+  },
+  "Locales": {
+    "SwitchLocale": "Switch lang to {locale, select, en {English} vi {Vietnamese} other {Unknown}}"
+  },
+  "Pages": {
+    "Secret": "Secret"
+  },
+  "Content": {
+    "Title": "Demo Next JS 13.5.2 + Next Intl + Tailwind CSS"
+  },
+  "Messages": {
+    "IsRequired": "{field} is required field!",
+    "UsernameOrPasswordInCorrect": "Username or password is incorrect!"
+  }
+}
