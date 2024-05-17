@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3300;
 
-const buildPath = path.join(__dirname, 'build');
+const buildPath = path.join(__dirname, 'client/build');
 
 app.use(express.static(buildPath));
 app.use(express.json());
