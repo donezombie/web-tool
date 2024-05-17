@@ -39,7 +39,7 @@ const Base64Trigger = ({ tab }: { tab: { tab: number } }) => {
         }
       }}
     >
-      {() => {
+      {({ isSubmitting }) => {
         return (
           <Form style={{ width: '100%' }}>
             <CommonStyles.Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -78,6 +78,7 @@ const Base64Trigger = ({ tab }: { tab: { tab: number } }) => {
                       copyToClipboard(result);
                       showSuccess('Copied!');
                     }}
+                    loading={isSubmitting}
                   >
                     Copy
                   </CommonStyles.Button>
