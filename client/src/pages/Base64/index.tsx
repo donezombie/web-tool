@@ -7,6 +7,7 @@ import { showError, showSuccess } from 'helpers/toast';
 import httpService from 'services/httpService';
 import { copyToClipboard } from 'helpers';
 import Tabs from 'components/Tabs';
+import * as Yup from 'yup';
 
 const ModeBase64 = {
   ENCODE: 0,
@@ -22,6 +23,9 @@ const Base64Trigger = ({ tab }: { tab: { tab: number } }) => {
   return (
     <Formik
       initialValues={{ input: '' }}
+      validationSchema={Yup.object().shape({
+        input: Yup.string().required('Input is required field!'),
+      })}
       onSubmit={async ({ input }, { setSubmitting }) => {
         try {
           setSubmitting(true);
@@ -46,12 +50,11 @@ const Base64Trigger = ({ tab }: { tab: { tab: number } }) => {
               <Field
                 component={TextField}
                 name='input'
-                label=''
-                placeholder='Type or Paste here...'
                 multiline
                 rows={4}
                 fullWidth
                 variant='filled'
+                label='Type or Paste here...'
               />
 
               <CommonStyles.Button type='submit' loading={isSubmitting}>

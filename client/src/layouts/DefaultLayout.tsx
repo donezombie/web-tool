@@ -99,73 +99,8 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   const { isMobile } = useCheckWidth();
 
   //! Function
-  // const handleDrawerOpen = () => {
-  //   setOpen(true);
-  // };
-
-  // const handleDrawerClose = () => {
-  //   setOpen(false);
-  // };
-
-  // const customStyleHeader = React.useMemo(() => {
-  //   return {
-  //     [theme.breakpoints.up('xs')]: {
-  //       minHeight: 0,
-  //       height: 50,
-  //     },
-  //   };
-  // }, [theme]);
 
   //! Render
-  // const renderAppBar = () => {
-  //   return (
-  //     <Typography variant='h6' noWrap component='div'>
-  //       Custom header here
-  //     </Typography>
-  //   );
-  // };
-
-  const renderBtnLogout = () => {
-    return (
-      <List>
-        <ListItem disablePadding sx={{ display: 'block' }}>
-          <ListItemButton
-            onClick={() => {
-              auth.logout();
-            }}
-            sx={{
-              minHeight: 48,
-              justifyContent: open ? 'initial' : 'center',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
-          >
-            <ListItemIcon
-              sx={{
-                minWidth: 0,
-                justifyContent: 'center',
-                color: theme.colors?.white,
-              }}
-            >
-              <CommonIcons.LogoutIcon />
-            </ListItemIcon>
-            <CommonStyles.Typography
-              sx={{
-                opacity: open ? 1 : 0,
-                fontSize: '0.825rem',
-                pt: 0.5,
-                color: theme.colors?.white,
-              }}
-            >
-              Logout
-            </CommonStyles.Typography>
-          </ListItemButton>
-        </ListItem>
-      </List>
-    );
-  };
-
   const renderAsideMenu = () => {
     return asideMenu.map((eachList, idxEachList) => {
       return (
