@@ -54,7 +54,7 @@ const Base64Trigger = ({ tab }: { tab: { tab: number } }) => {
                 variant='filled'
               />
 
-              <CommonStyles.Button type='submit'>
+              <CommonStyles.Button type='submit' loading={isSubmitting}>
                 {isEncode ? 'Encode' : 'Decode'}
               </CommonStyles.Button>
 
@@ -78,7 +78,6 @@ const Base64Trigger = ({ tab }: { tab: { tab: number } }) => {
                       copyToClipboard(result);
                       showSuccess('Copied!');
                     }}
-                    loading={isSubmitting}
                   >
                     Copy
                   </CommonStyles.Button>
